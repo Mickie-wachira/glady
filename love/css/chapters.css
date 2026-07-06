@@ -1,0 +1,1632 @@
+/* ==========================================================
+   CHAPTER 2 - THINGS I LIKE ABOUT YOU
+   ========================================================== */
+
+#admire{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    180deg,
+    #111c36 0%,
+    #091224 40%,
+    #050816 100%);
+
+}
+
+/* Decorative Glow */
+
+#admire::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,92,147,.10),
+    transparent 70%);
+
+    top:-250px;
+
+    left:-150px;
+
+    filter:blur(40px);
+
+}
+
+#admire::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,211,105,.08),
+    transparent 70%);
+
+    right:-150px;
+
+    bottom:-150px;
+
+    filter:blur(40px);
+
+}
+
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.admire-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.admire-header p{
+
+    color:#FFD369;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+}
+
+.admire-header h2{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:72px;
+
+    color:white;
+
+    text-shadow:
+
+    0 0 15px #ff5c93,
+
+    0 0 40px #ff5c93;
+
+}
+
+.admire-header span{
+
+    display:block;
+
+    width:180px;
+
+    height:4px;
+
+    margin:30px auto;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    transparent,
+
+    #FFD369,
+
+    transparent
+
+    );
+
+}
+
+
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.admire-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+}
+
+
+
+/* ==========================================================
+   CARD
+   ========================================================== */
+
+.admire-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:
+
+    rgba(255,255,255,.07);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid
+
+    rgba(255,255,255,.10);
+
+    transition:.45s;
+
+    cursor:pointer;
+
+    box-shadow:
+
+    0 15px 40px
+
+    rgba(0,0,0,.25);
+
+}
+
+
+
+/* Top Glow */
+
+.admire-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-50%;
+
+    top:-50%;
+
+    width:250px;
+
+    height:250px;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,255,255,.18),
+
+    transparent 70%);
+
+    transition:.6s;
+
+}
+
+
+
+/* Hover */
+
+.admire-card:hover{
+
+    transform:
+
+    translateY(-15px)
+
+    rotateX(8deg)
+
+    rotateY(-8deg);
+
+    border-color:
+
+    rgba(255,92,147,.5);
+
+    box-shadow:
+
+    0 20px 60px
+
+    rgba(255,92,147,.35);
+
+}
+
+.admire-card:hover::before{
+
+    left:80%;
+
+    top:80%;
+
+}
+
+
+
+/* Number */
+
+.number{
+
+    font-size:55px;
+
+    font-weight:700;
+
+    color:
+
+    rgba(255,92,147,.18);
+
+}
+
+
+
+/* Card Title */
+
+.admire-card h3{
+
+    margin-top:20px;
+
+    font-size:28px;
+
+    color:white;
+
+}
+
+
+
+/* Description */
+
+.admire-card p{
+
+    margin-top:20px;
+
+    line-height:1.9;
+
+    color:#d9d9d9;
+
+}
+
+
+
+/* Floating Dot */
+
+.admire-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#FFD369;
+
+    right:25px;
+
+    top:25px;
+
+    box-shadow:
+
+    0 0 10px #FFD369,
+
+    0 0 25px #FFD369;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media(max-width:900px){
+
+    .admire-header h2{
+
+        font-size:55px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    #admire{
+
+        padding:90px 25px;
+
+    }
+
+    .admire-header h2{
+
+        font-size:45px;
+
+    }
+
+    .admire-card{
+
+        padding:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .admire-header h2{
+
+        font-size:38px;
+
+    }
+
+    .number{
+
+        font-size:40px;
+
+    }
+
+    .admire-card h3{
+
+        font-size:22px;
+
+    }
+
+}
+/* ==========================================================
+   CHAPTER 3 - CAPTURED MOMENTS
+   ========================================================== */
+
+#gallery{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    180deg,
+    #050816 0%,
+    #091224 45%,
+    #111c36 100%);
+
+}
+
+
+/* Background Glow */
+
+#gallery::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    left:-350px;
+
+    top:-300px;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,92,147,.12),
+
+    transparent 70%);
+
+    filter:blur(60px);
+
+}
+
+#gallery::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    right:-250px;
+
+    bottom:-200px;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,211,105,.10),
+
+    transparent 70%);
+
+    filter:blur(60px);
+
+}
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.gallery-header{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.gallery-header p{
+
+    color:#FFD369;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    margin-bottom:20px;
+
+}
+
+.gallery-header h2{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:72px;
+
+    color:white;
+
+    text-shadow:
+
+    0 0 15px #ff5c93,
+
+    0 0 35px #ff5c93;
+
+}
+
+.gallery-header span{
+
+    display:block;
+
+    width:180px;
+
+    height:4px;
+
+    margin:30px auto;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    transparent,
+
+    #FFD369,
+
+    transparent);
+
+}
+
+.gallery-header h4{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#d8d8d8;
+
+    font-weight:300;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ==========================================================
+   GALLERY GRID
+   ========================================================== */
+
+.gallery-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:40px;
+
+}
+
+
+
+/* ==========================================================
+   PHOTO CARD
+   ========================================================== */
+
+.photo-card{
+
+    position:relative;
+
+    padding:15px;
+
+    border-radius:25px;
+
+    background:
+
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    transition:.45s;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.3);
+
+}
+
+
+
+/* Shine */
+
+.photo-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,255,255,.18),
+
+    transparent 70%);
+
+    left:-180px;
+
+    top:-180px;
+
+    transition:.8s;
+
+}
+
+
+
+/* Hover */
+
+.photo-card:hover{
+
+    transform:
+
+    translateY(-15px)
+
+    rotate(-2deg)
+
+    scale(1.03);
+
+    box-shadow:
+
+    0 20px 60px
+
+    rgba(255,92,147,.35);
+
+}
+
+.photo-card:hover::before{
+
+    left:100%;
+
+    top:100%;
+
+}
+
+
+
+/* Image */
+
+.photo-card img{
+
+    width:100%;
+
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    display:block;
+
+}
+
+
+
+/* ==========================================================
+   LIGHTBOX
+   ========================================================== */
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.95);
+
+    z-index:999999;
+
+    flex-direction:column;
+
+}
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:80vh;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 0 35px rgba(255,255,255,.15);
+
+}
+
+
+
+/* Close */
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    font-size:55px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+/* Navigation */
+
+#prevImage,
+#nextImage{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(255,255,255,.15);
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#prevImage:hover,
+#nextImage:hover{
+
+    background:#ff5c93;
+
+}
+
+#prevImage{
+
+    left:30px;
+
+}
+
+#nextImage{
+
+    right:30px;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media(max-width:900px){
+
+.gallery-header h2{
+
+font-size:55px;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+#gallery{
+
+padding:90px 25px;
+
+}
+
+.gallery-header h2{
+
+font-size:45px;
+
+}
+
+.photo-card img{
+
+height:300px;
+
+}
+
+}
+
+
+
+@media(max-width:480px){
+
+.gallery-header h2{
+
+font-size:38px;
+
+}
+
+.photo-card img{
+
+height:240px;
+
+}
+
+#prevImage,
+#nextImage{
+
+width:50px;
+
+height:50px;
+
+font-size:22px;
+
+}
+
+}
+/* ==========================================================
+   CHAPTER 4 - A LETTER TO GLADYS
+   ========================================================== */
+
+#letter{
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:120px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+
+    180deg,
+
+    #111c36,
+
+    #091224,
+
+    #050816);
+
+}
+
+
+/* Background Glow */
+
+#letter::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,92,147,.10),
+
+    transparent 70%);
+
+    filter:blur(70px);
+
+    animation:letterGlow 8s ease-in-out infinite;
+
+}
+
+
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.letter-header{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+    z-index:2;
+
+}
+
+.letter-header p{
+
+    color:#FFD369;
+
+    text-transform:uppercase;
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+
+}
+
+.letter-header h2{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:72px;
+
+    color:white;
+
+    text-shadow:
+
+    0 0 20px #ff5c93;
+
+}
+
+.letter-header span{
+
+    display:block;
+
+    width:180px;
+
+    height:4px;
+
+    margin:30px auto;
+
+    border-radius:50px;
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    transparent,
+
+    #FFD369,
+
+    transparent);
+
+}
+/*==========================================================
+  CHAPTER 4 - LETTER
+==========================================================*/
+
+#letter{
+    min-height:100vh;
+    padding:120px 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(180deg,#090b1d,#131d38,#090b1d);
+    overflow:hidden;
+    position:relative;
+}
+
+#letter::before{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:900px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(255,80,120,.18),
+    transparent 70%);
+    filter:blur(70px);
+}
+
+/* ---------------- TITLE ---------------- */
+
+.letter-title{
+    text-align:center;
+    z-index:5;
+    margin-bottom:60px;
+}
+
+.letter-title p{
+    color:#FFD369;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.letter-title h2{
+    font-family:"Great Vibes",cursive;
+    font-size:72px;
+    color:#fff;
+    text-shadow:0 0 20px hotpink;
+}
+
+.title-line{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    color:#ff5c93;
+    margin-top:20px;
+}
+
+.title-line span{
+    width:140px;
+    height:2px;
+    background:#FFD369;
+}
+
+/* ---------------- WRAPPER ---------------- */
+
+.letter-wrapper{
+    position:relative;
+    width:520px;
+    height:620px;
+}
+
+/* ---------------- PAPER ---------------- */
+
+.paper{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    top:20px;
+
+    width:430px;
+
+    min-height:560px;
+
+    background:#fff9ef;
+
+    border-radius:18px;
+
+    padding:45px;
+
+    z-index:20;
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.35);
+
+    transition:1s;
+
+}
+
+.paper h3{
+
+    text-align:center;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:50px;
+
+    color:#d6336c;
+
+}
+
+.paper-line{
+
+    width:170px;
+
+    height:2px;
+
+    background:#ff5c93;
+
+    margin:20px auto;
+
+}
+
+#letterTyping{
+
+    color:#333;
+
+    line-height:2;
+
+    font-size:18px;
+
+    margin-top:30px;
+
+}
+
+.paper-footer{
+
+    margin-top:40px;
+
+    text-align:center;
+
+}
+
+.paper-footer p{
+
+    color:#c2185b;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:30px;
+
+}
+
+/* ---------------- ENVELOPE ---------------- */
+
+.envelope{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:470px;
+
+    height:290px;
+
+    z-index:30;
+
+}
+
+/* BACK */
+
+.envelope-back{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#efd7bf;
+
+    border-radius:10px;
+
+}
+
+/* LEFT */
+
+.left-flap{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:50%;
+
+    height:100%;
+
+    background:#f6e2cf;
+
+    clip-path:polygon(0 100%,100% 0,100% 100%);
+
+    z-index:32;
+
+}
+
+/* RIGHT */
+
+.right-flap{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:50%;
+
+    height:100%;
+
+    background:#f6e2cf;
+
+    clip-path:polygon(0 0,100% 100%,0 100%);
+
+    z-index:32;
+
+}
+
+/* BOTTOM */
+
+.bottom-flap{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:65%;
+
+    background:#f1d8c0;
+
+    clip-path:polygon(0 100%,50% 0,100% 100%);
+
+    z-index:34;
+
+}
+
+/* TOP */
+
+.top-flap{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:60%;
+
+    background:#ebccb1;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    transform-origin:top;
+
+    transition:1s;
+
+    z-index:40;
+
+}
+
+/* SEAL */
+
+.seal{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:20px;
+
+    transform:translateX(-50%);
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#b3124f;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    z-index:45;
+
+    box-shadow:0 0 25px rgba(0,0,0,.4);
+
+}
+
+/* OPEN */
+
+.envelope.open .top-flap{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open{
+
+    z-index:5;
+
+}
+
+.paper.show{
+
+    transform:translateX(-50%) translateY(-170px);
+
+}
+
+/* TEXT */
+
+.open-text{
+
+    color:#FFD369;
+
+    margin-top:40px;
+
+    letter-spacing:2px;
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{opacity:.4;}
+
+50%{opacity:1;}
+
+100%{opacity:.4;}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.paper{
+
+width:320px;
+
+padding:30px;
+
+min-height:470px;
+
+}
+
+.paper h3{
+
+font-size:38px;
+
+}
+
+.envelope{
+
+width:360px;
+
+height:220px;
+
+}
+
+.letter-title h2{
+
+font-size:48px;
+
+}
+
+}
+/*==========================================================
+  CHAPTER 5 - REASONS
+==========================================================*/
+
+#reasons{
+    position:relative;
+    min-height:100vh;
+    padding:120px 8%;
+    background:linear-gradient(180deg,#050816,#0c1730,#050816);
+    overflow:hidden;
+}
+
+#reasons::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    top:-250px;
+    left:-250px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(255,92,147,.12),
+    transparent 70%);
+    filter:blur(70px);
+}
+
+#reasons::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    bottom:-220px;
+    right:-220px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(255,211,105,.10),
+    transparent 70%);
+    filter:blur(70px);
+}
+
+/*==========================
+HEADER
+==========================*/
+
+.reasons-header{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.reasons-header p:first-child{
+    color:#FFD369;
+    letter-spacing:5px;
+    text-transform:uppercase;
+}
+
+.reasons-header h2{
+    margin:20px 0;
+    font-family:"Great Vibes",cursive;
+    font-size:70px;
+    color:#fff;
+    text-shadow:0 0 20px #ff5c93;
+}
+
+.heading-line{
+    width:180px;
+    height:4px;
+    margin:25px auto;
+    border-radius:20px;
+    background:linear-gradient(to right,
+    transparent,#FFD369,transparent);
+}
+
+.subtitle{
+    max-width:700px;
+    margin:auto;
+    color:#d9d9d9;
+    line-height:1.8;
+}
+
+/*==========================
+COUNTER
+==========================*/
+
+.reason-counter{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    margin:60px auto;
+}
+
+#reasonCount{
+    display:block;
+    font-size:90px;
+    font-weight:bold;
+    color:#ff5c93;
+    text-shadow:
+    0 0 20px #ff5c93,
+    0 0 40px #ff5c93;
+}
+
+.reason-counter p{
+    color:white;
+    letter-spacing:2px;
+    margin-top:10px;
+}
+
+/*==========================
+GRID
+==========================*/
+
+.reasons-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+/*==========================
+CARD
+==========================*/
+
+.reason-card{
+    position:relative;
+    padding:35px;
+    text-align:center;
+    border-radius:25px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.45s;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.reason-card::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:250px;
+    left:-220px;
+    top:-220px;
+    border-radius:50%;
+    background:radial-gradient(circle,
+    rgba(255,255,255,.18),
+    transparent 70%);
+    transition:.7s;
+}
+
+.reason-card:hover::before{
+    left:100%;
+    top:100%;
+}
+
+.reason-card:hover{
+    transform:translateY(-15px) scale(1.03);
+    border-color:#ff5c93;
+    box-shadow:
+    0 25px 60px rgba(255,92,147,.35);
+}
+
+.reason-icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.reason-card h3{
+    color:white;
+    margin-bottom:18px;
+    font-size:28px;
+}
+
+.reason-card p{
+    color:#dddddd;
+    line-height:1.8;
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+    #reasons{
+        padding:90px 25px;
+    }
+
+    .reasons-header h2{
+        font-size:48px;
+    }
+
+    #reasonCount{
+        font-size:65px;
+    }
+
+    .reason-card{
+        padding:28px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .reasons-header h2{
+        font-size:38px;
+    }
+
+    .reason-icon{
+        font-size:42px;
+    }
+
+    .reason-card h3{
+        font-size:22px;
+    }
+
+}
+

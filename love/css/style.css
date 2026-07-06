@@ -1,0 +1,1227 @@
+/* ==========================================================
+   PROJECT CUPID
+   STYLE.CSS
+   PART 1
+   Author: ChatGPT
+   ========================================================== */
+
+
+/* ==========================================================
+   GOOGLE FONTS
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ==========================================================
+   RESET
+   ========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#050816;
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+
+/* ==========================================================
+   VARIABLES
+   ========================================================== */
+
+:root{
+
+    --primary:#ff5c93;
+
+    --secondary:#ffb5c8;
+
+    --gold:#ffd369;
+
+    --dark:#050816;
+
+    --glass:rgba(255,255,255,.08);
+
+    --border:rgba(255,255,255,.15);
+
+}
+
+
+/* ==========================================================
+   LOADER
+   ========================================================== */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050816;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:999999;
+
+}
+
+.loader-heart{
+
+    font-size:80px;
+
+    color:var(--primary);
+
+    animation:heartbeat 1s infinite;
+
+}
+
+#loader h2{
+
+    margin-top:25px;
+
+    font-weight:300;
+
+    letter-spacing:2px;
+
+    color:white;
+
+}
+
+
+/* ==========================================================
+   CURSOR
+   ========================================================== */
+
+.cursor{
+
+    width:22px;
+
+    height:22px;
+
+    border:2px solid white;
+
+    border-radius:50%;
+
+    position:fixed;
+
+    transform:translate(-50%,-50%);
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    transition:
+
+    width .2s,
+
+    height .2s,
+
+    background .2s;
+
+}
+
+
+
+/* ==========================================================
+   BACKGROUND
+   ========================================================== */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-100;
+
+}
+
+
+/* Sky */
+
+.background::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top,
+
+    #1b2d63,
+
+    #0c1431,
+
+    #050816);
+
+}
+
+
+
+/* ==========================================================
+   STARS
+   ========================================================== */
+
+#stars{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    radial-gradient(white 1px,transparent 1px);
+
+    background-size:45px 45px;
+
+    opacity:.45;
+
+    animation:twinkle 5s infinite alternate;
+
+}
+
+
+
+/* ==========================================================
+   MOON
+   ========================================================== */
+
+.moon{
+
+    width:190px;
+
+    height:190px;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:70px;
+
+    right:90px;
+
+    background:#fff8cc;
+
+    box-shadow:
+
+    0 0 40px #fff3a5,
+
+    0 0 100px #fff3a5,
+
+    0 0 180px #fff3a5;
+
+}
+
+/* Moon Craters */
+
+.moon::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:25px;
+
+    height:25px;
+
+    border-radius:50%;
+
+    background:#ece3b5;
+
+    top:40px;
+
+    left:40px;
+
+}
+
+.moon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:15px;
+
+    height:15px;
+
+    border-radius:50%;
+
+    background:#ece3b5;
+
+    bottom:45px;
+
+    right:50px;
+
+}
+
+
+
+/* ==========================================================
+   CLOUDS
+   ========================================================== */
+
+.cloud{
+
+    position:absolute;
+
+    width:350px;
+
+    height:90px;
+
+    border-radius:100px;
+
+    filter:blur(18px);
+
+    background:rgba(255,255,255,.06);
+
+}
+
+.cloud1{
+
+    top:110px;
+
+    left:-400px;
+
+    animation:cloudOne 70s linear infinite;
+
+}
+
+.cloud2{
+
+    top:250px;
+
+    left:-600px;
+
+    animation:cloudTwo 90s linear infinite;
+
+}
+
+.cloud3{
+
+    bottom:180px;
+
+    left:-500px;
+
+    animation:cloudThree 120s linear infinite;
+
+}
+
+
+
+/* ==========================================================
+   FIREFLIES
+   ========================================================== */
+
+#fireflies{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.firefly{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#ffd369;
+
+    box-shadow:
+
+    0 0 8px #ffd369,
+
+    0 0 15px #ffd369;
+
+}
+
+
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+nav{
+
+    width:100%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    padding:25px 70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(0,0,0,.15);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:var(--secondary);
+
+    text-shadow:0 0 15px hotpink;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:45px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}
+
+nav ul li a:hover{
+
+    color:var(--gold);
+
+}
+
+#musicBtn{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    font-size:18px;
+
+    backdrop-filter:blur(20px);
+
+    transition:.3s;
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.1);
+
+    background:var(--primary);
+
+}
+
+
+/* ==========================================================
+   HERO SECTION
+   ========================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+}
+
+.welcome{
+
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:140px;
+
+    color:#fff;
+
+    text-shadow:
+
+    0 0 20px hotpink,
+
+    0 0 60px hotpink;
+
+    margin-bottom:20px;
+
+}
+
+.hero h3{
+
+    font-size:32px;
+
+    font-weight:400;
+
+    margin-bottom:30px;
+
+    color:#ffe5ef;
+
+}
+
+.description{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#ddd;
+
+    margin:auto;
+
+    max-width:760px;
+
+}
+
+#beginJourney{
+
+    margin-top:60px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#ff4f8d,#ff8db8);
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 0 30px rgba(255,92,147,.5);
+
+}
+
+#beginJourney:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 0 25px hotpink,
+
+    0 0 60px hotpink;
+
+}
+/* ==========================================================
+   SCROLL INDICATOR
+   ========================================================== */
+
+.scroll-down{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+}
+
+.scroll-down span{
+
+    width:28px;
+
+    height:48px;
+
+    border:2px solid rgba(255,255,255,.7);
+
+    border-radius:40px;
+
+    position:relative;
+
+}
+
+.scroll-down span::before{
+
+    content:"";
+
+    width:6px;
+
+    height:10px;
+
+    background:white;
+
+    border-radius:50px;
+
+    position:absolute;
+
+    left:50%;
+
+    top:8px;
+
+    transform:translateX(-50%);
+
+    animation:scrollWheel 2s infinite;
+
+}
+
+
+
+/* ==========================================================
+   FLOATING HEARTS
+   ========================================================== */
+
+.heart{
+
+    position:absolute;
+
+    bottom:-60px;
+
+    color:rgba(255,130,180,.8);
+
+    user-select:none;
+
+    pointer-events:none;
+
+    animation:heartFloat linear forwards;
+
+}
+
+
+
+/* ==========================================================
+   SHOOTING STARS
+   ========================================================== */
+
+.shooting-star{
+
+    position:absolute;
+
+    width:180px;
+
+    height:2px;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        white,
+
+        rgba(255,255,255,0)
+
+    );
+
+    border-radius:50px;
+
+    transform:rotate(-35deg);
+
+    opacity:0;
+
+}
+
+
+
+/* ==========================================================
+   GLASS CARD
+   ========================================================== */
+
+.glass{
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:25px;
+
+    box-shadow:
+
+    0 10px 40px rgba(0,0,0,.25);
+
+}
+
+
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+button i{
+
+    margin-left:10px;
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+
+
+/* ==========================================================
+   TEXT SELECTION
+   ========================================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#091224;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#ff3d7d;
+
+}
+
+
+
+/* ==========================================================
+   ANIMATIONS
+   ========================================================== */
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    25%{
+
+        transform:scale(1.12);
+
+    }
+
+    50%{
+
+        transform:scale(.95);
+
+    }
+
+    75%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+@keyframes twinkle{
+
+    from{
+
+        opacity:.25;
+
+    }
+
+    to{
+
+        opacity:.65;
+
+    }
+
+}
+
+
+
+@keyframes cloudOne{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(2200px);
+
+    }
+
+}
+
+
+
+@keyframes cloudTwo{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(2500px);
+
+    }
+
+}
+
+
+
+@keyframes cloudThree{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(2800px);
+
+    }
+
+}
+
+
+
+@keyframes scrollWheel{
+
+    0%{
+
+        opacity:0;
+
+        top:8px;
+
+    }
+
+    40%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        top:24px;
+
+    }
+
+}
+
+
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:
+
+        translateY(0)
+
+        scale(.5)
+
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+
+        translateY(-120vh)
+
+        rotate(360deg)
+
+        scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+@keyframes moonFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes shooting{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+
+        translateX(0)
+
+        translateY(0)
+
+        rotate(-35deg);
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+
+        translateX(-900px)
+
+        translateY(450px)
+
+        rotate(-35deg);
+
+    }
+
+}
+
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   APPLY ANIMATIONS
+   ========================================================== */
+
+.moon{
+
+    animation:moonFloat 7s ease-in-out infinite;
+
+}
+
+.hero-content{
+
+    animation:fadeUp 1.8s ease;
+
+}
+
+.logo{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media(max-width:1100px){
+
+.hero h1{
+
+font-size:100px;
+
+}
+
+.hero h3{
+
+font-size:26px;
+
+}
+
+.description{
+
+font-size:18px;
+
+}
+
+}
+
+
+
+@media(max-width:768px){
+
+nav{
+
+padding:18px 25px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:72px;
+
+}
+
+.hero h3{
+
+font-size:22px;
+
+}
+
+.description{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+#beginJourney{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+.moon{
+
+width:120px;
+
+height:120px;
+
+right:20px;
+
+top:80px;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+}
+
+
+
+@media(max-width:480px){
+
+.hero{
+
+padding:100px 18px;
+
+}
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.hero h3{
+
+font-size:18px;
+
+}
+
+.description{
+
+font-size:15px;
+
+}
+
+.scroll-down{
+
+display:none;
+
+}
+
+.cursor{
+
+display:none;
+
+}
+
+}
